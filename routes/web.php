@@ -4,6 +4,7 @@ use App\Http\Controllers\categoriacontroller;
 use App\Http\Controllers\clientecontroller;
 use App\Http\Controllers\productocontroller;
 use App\Http\Controllers\proveedorescontroller;
+use App\Http\Controllers\rolecontroller;
 use App\Http\Controllers\usuarioscontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -104,3 +105,19 @@ Route::post('usuario/destroy/{id}', [usuarioscontroller::class,'destroy'])->name
 Route::get('usuario/edit/{id}', [usuarioscontroller::class,'edit'])->name("edit.usuario");
 
 Route::post('usuario/update/{id}', [usuarioscontroller::class,'update'])->name("update.usuario");
+
+//Rol
+
+Route::get('/roles', [rolecontroller::class,'index'])->name("list.roles");
+
+Route::get('rol/create', [rolecontroller::class,'create'])->name("create.rol");
+
+Route::post('rol/new', [rolecontroller::class,'store'])->name("new.rol");
+
+Route::get('rol/remove/{id}', [rolecontroller::class,'remove'])->name("remove.rol");
+
+Route::post('rol/destroy/{id}', [rolecontroller::class,'destroy'])->name("destroy.rol");
+
+Route::get('rol/edit/{id}', [rolecontroller::class,'edit'])->name("edit.rol");
+
+Route::post('rol/update/{id}', [rolecontroller::class,'update'])->name("update.rol");

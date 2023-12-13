@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4">
@@ -60,7 +60,23 @@
                     </div>
                 </div>
             </div>
+    
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3>Roles</h3>
+                        <a class="btn btn-dark" href="{{route('list.roles')}}">Listar roles</a>
+                        <a class="btn btn-dark" href="{{route('create.rol')}}">Registrar nuevo rol</a>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+    
+
+        
+
+        
     </div>
     
     
